@@ -37,7 +37,6 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            border-radius: 5px;
         }
         nav a {
             color: #fff;
@@ -104,9 +103,18 @@
         input[type="submit"]:hover {
             background-color: #0066cc;
         }
+        marquee {
+            color: white;
+            background-color: #213a8f;
+            padding: 10px 20px; 
+            margin-bottom: -5px;
+        }
     </style>
 </head>
 <body>
+    <marquee behavior="scroll" direction="left" scrollamount="4">
+        Innovative Cutting-edge Technology | Qualified Diligent Staff | Economical Reasonable Charges
+    </marquee>
     <header>
         <div class="logo">
             <a href="index.html">
@@ -117,7 +125,8 @@
             <a href="index.html">Home</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
-            <a href="pharamacy.html">Pharmacy</a>
+            <a href="pharmacy.html">Pharmacy</a>
+            <a href="eye.html">Eye Test</a>
         </nav>
         <div class="header-content">
             <h1>Mount Lotus Eye & ENT Hospital - Contact</h1>
@@ -125,7 +134,6 @@
         </div>
     </header>
     <div class="container">
-        
         <div class="contact-form">
             <form action="contact.html" method="post">
                 <div class="form-group">
@@ -137,13 +145,46 @@
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Contact Method:</label>
+                    <div>
+                        <input type="radio" id="contact-email" name="contact-method" value="email">
+                        <label for="contact-email">Email</label>
+                        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                        <label for="contact-phone">Phone</label>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <input type="submit" value="Submit">
+                <div class="form-group">
+                    <label for="appointment-date">Preferred Appointment Date:</label>
+                    <input type="date" id="appointment-date" name="appointment-date">
+                </div>
+                <div class="form-group">
+                    <label for="number-of-attendees">Number of Attendees:</label>
+                    <input type="number" id="number-of-attendees" name="number-of-attendees" min="1" value="1">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="subscribe-newsletter" name="subscribe-newsletter" value="yes">
+                    <label for="subscribe-newsletter">Subscribe to our Newsletter</label>
+                </div>
+                <input type="submit" value="Book Now">
             </form>
         </div>
-        
     </div>
 </body>
 </html>
